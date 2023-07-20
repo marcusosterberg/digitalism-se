@@ -4,3 +4,8 @@ image: williamjackson/pelican
 command: pelican content
 # Public directory
 public: output
+domains:
+  # Primary domain
+  - digitalism.se
+  # Domains that redirect to the primary
+  - www.digitalism.se
