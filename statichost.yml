@@ -1,6 +1,6 @@
 # Docker image to use for building
 image: williamjackson/pelican
 # Build command
-command: mkdir my-site && cd my-site && run -it --rm --entrypoint pelican-quickstart -v ${PWD}:/my-site williamjackson/pelican
+command: pelican content
 # Public directory
 public: _site
