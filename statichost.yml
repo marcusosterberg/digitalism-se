@@ -1,6 +1,6 @@
 # Docker image to use for building
 image: williamjackson/pelican
 # Build command
-command: pelican content && cd output/
+command: pelican content
 # Public directory
-public: .
+public: output
