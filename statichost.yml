@@ -1,5 +1,5 @@
 # Docker image to use for building
-image: jekyll/jekyll:3.1
+image: jekyll/jekyll:3.8
 # Build command
 command: jekyll build
 # Public directory
