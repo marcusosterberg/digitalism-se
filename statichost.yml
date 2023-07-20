@@ -1,6 +1,6 @@
 # Docker image to use for building
 image: jekyll/jekyll:3.8
 # Build command
-command: gem install bundler:2.4.17, jekyll build
+command: gem install bundler:2, jekyll build
 # Public directory
 public: _site
