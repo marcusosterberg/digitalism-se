@@ -1,2 +1,6 @@
-# Public directory is a dot, i.e. repository root
-public: /_posts/
+# Docker image to use for building
+image: jekyll/jekyll:3.8
+# Build command
+command: jekyll build
+# Public directory
+public: _posts
