@@ -3,4 +3,4 @@ image: jekyll/jekyll:3.1
 # Build command
 command: jekyll build
 # Public directory
-public: _posts
+public: _site
