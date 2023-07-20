@@ -1,6 +1,6 @@
 # Docker image to use for building
 image: jekyll/jekyll:3.8
 # Build command
-command: gem install bundler --source https://rubygems.org, bundle update -bundler, jekyll build
+command: gem install bundler -v "~>2.0", bundle update -bundler, jekyll build
 # Public directory
 public: _site
