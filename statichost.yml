@@ -1,2 +1,2 @@
 # Public directory is a dot, i.e. repository root
-public: _posts
+public: ./_posts
