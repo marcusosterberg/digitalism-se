@@ -1,5 +1,5 @@
 # Docker image to use for building
-image: jekyll/builder:4.0
+image: jekyll/builder:3.8
 # Build command
 command: bundle install && bundle update --bundler && jekyll build --verbose
 # Public directory
