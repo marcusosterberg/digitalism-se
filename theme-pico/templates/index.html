@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% for article in articles_page.object_list %}
+        <article class="hentry">
+                    {% if article.featimg|length > 1 %}
+                    <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalänk till {{ article.title|striptags }}"><img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/blogg/{{ article.featimg }}" style="width: 100%; height: auto;"{% if article.alttext|length >1 %} alt="{{ article.alttext }}"{% else %} alt=""{% endif %}></a>
+                    {% endif %}
+                    <h1 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalänk till {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
+                <div class="post-info">
+                    <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
+                    <address class="vcard author">By
+                    {% for author in article.authors %}
+                        <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+                    {% endfor %}
+                    </address>
+                </div><!-- /.post-info -->
+                <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
+        </article>
+{% endfor %}
+<!-- /#posts-list -->
+{% if articles_page.has_other_pages() %}
+    {% include 'pagination.html' %}
+{% endif %}
+
+{% endblock content %}
