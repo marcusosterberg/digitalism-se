@@ -1,6 +1,6 @@
 # Docker image to use for building
-image: jekyll/builder:3.8
+image: williamjackson/pelican
 # Build command
-command: bundle install &&  jekyll build --verbose
+command: mkdir my-site && cd my-site && docker container run -it --rm --entrypoint pelican-quickstart -v ${PWD}:/my-site williamjackson/pelican
 # Public directory
 public: _site
