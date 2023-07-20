@@ -3,4 +3,4 @@ image: williamjackson/pelican
 # Build command
 command: pelican content && cd output/
 # Public directory
-public: _site
+public: .
